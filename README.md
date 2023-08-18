@@ -3,5 +3,5 @@ Conceitos no desenvolvimento de jogos, construção de uma game engine básica (
 
 # Ambiente
 IDE - Pycharm
-Linguagem de programação Python
+# Linguagem de programação Python
 pip install pygame
