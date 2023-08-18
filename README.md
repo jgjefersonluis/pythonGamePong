@@ -13,3 +13,8 @@ IDE - Pycharm
 # Linguagem de programação Python
 * python 3.10
 * pip install pygame
+
+
+
+# Créditos
+* Pygame - Desenvolvimento de jogos - 2023. Renato Ikeuchi Programador - GameDev / Web
