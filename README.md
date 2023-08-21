@@ -10,8 +10,8 @@ O objetivo é aprender conceitos no desenvolvimento de jogos, construção de um
 
 # Ambiente
 IDE - Pycharm
-# Linguagem de programação Python
-* python 3.10
+# Linguagem de programação Python  <img alt="jgjefersonluis-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
+* python 3.10 
 * pip install pygame
 # Créditos
 * Pygame - Desenvolvimento de jogos - 2023. Renato Ikeuchi Programador - GameDev / Web
