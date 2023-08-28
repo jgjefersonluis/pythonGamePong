@@ -20,20 +20,26 @@ font = pygame.font.Font(None, 50)
 placar_player1 = font.render(str(player1_score), True, "white")
 placar_player2 = font.render(str(player2_score), True, "white")
 
+jogando = True
 # lógica de repetição e decisão
 loop = True
 while loop:
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            loop = False
+    if jogando:
 
-        if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_w:
-                player1_speed = -1
-            elif event.key == pygame.K_s:
-                player1_speed = 1
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                loop = False
+
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_w:
+                    player1_speed = -1
+                elif event.key == pygame.K_s:
+                    player1_speed = 1
     # colisões
+    if player2_score >= 3:
+        jogando = False
+
     if ball.colliderect(player1) or ball.colliderect(player2):
         ball_dir_x *= -1
         hit = pygame.mixer.Sound("assets/pong.wav")
@@ -79,4 +85,12 @@ while loop:
     pygame.draw.circle(display, "white", ball.center, 8)
     display.blit(placar_player1, (500, 50))
     display.blit(placar_player2, (780, 50))
-    pygame.display.flip()
+else:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            loop = False
+    display.fill((0, 0, 0))
+    text_win = font.render("Game Over", True, "white")
+    display.blit(text_win, [(540), 360])
+
+pygame.display.flip()
